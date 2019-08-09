@@ -38,6 +38,7 @@ class Plugin {
 	private function load_service_providers() {
 		$this->providers['schema'] = new Container\Schema_Provider();
 		$this->providers['queue']  = new Container\Queue_Provider();
+		$this->providers['cli']    = new Container\CLI_Provider();
 
 		/**
 		 * Filter the service providers the power the plugin
