@@ -36,6 +36,7 @@ class Plugin {
 	}
 
 	private function load_service_providers() {
+		$this->providers['schema'] = new Container\Schema_Provider();
 
 		/**
 		 * Filter the service providers the power the plugin
