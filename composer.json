@@ -1,0 +1,58 @@
+{
+	"name": "jbrinley/wcorl-2019",
+	"authors": [
+		{
+			"name": "Jonathan Brinley",
+			"email": "jonathanbrinley@gmail.com"
+		}
+	],
+	"config": {
+		"vendor-dir": "vendor",
+		"preferred-install": "dist"
+	},
+	"description": "Demo WordPress installation for WordCamp Orlando 2019",
+	"type": "project",
+	"license": "GPL-2.0-or-later",
+	"minimum-stability": "dev",
+	"prefer-stable": true,
+	"repositories": [
+		{
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		}
+	],
+	"require": {
+		"php": "^7.1",
+		"composer/installers": "1.4.0",
+		"johnpbloch/wordpress-core-installer": "1.0.0",
+		"johnpbloch/wordpress-core": "5.2.1",
+		"monolog/monolog": "1.23.0",
+		"pimple/pimple": "~3.0@dev",
+		"vlucas/phpdotenv": "^3.0",
+		"league/csv": "^9.2",
+		"wpackagist-theme/twentysixteen": "^2.0"
+	},
+	"require-dev": {
+		"wp-cli/wp-cli": "^2.2.0",
+		"lucatume/wp-browser": "^2.2.14"
+	},
+	"extra": {
+		"wordpress-install-dir": "wp",
+		"installer-paths": {
+			"wp-content/mu-plugins/{$name}": [
+				"type:wordpress-muplugin"
+			],
+			"wp-content/plugins/{$name}": [
+				"type:wordpress-plugin"
+			],
+			"wp-content/themes/{$name}": [
+				"type:wordpress-theme"
+			]
+		}
+	},
+	"autoload": {
+		"psr-4": {
+			"WordCamp\\Queue\\": "wp-content/plugins/wordcamp-queue/src/Queue"
+		}
+	}
+}
